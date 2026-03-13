@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { fetchGIF, fetchPhotos, fetchVideos } from "../api/mediaAPI"
 import { useEffect } from "react"
 import { setError, setLoading, setResults } from "../redux/features/searchSlice"
+import ResultCard from "./ResultCard"
 
 
 const ResultGrid = () => {
@@ -23,7 +24,8 @@ const ResultGrid = () => {
                         type: 'photo',
                         thumbnail: item.urls.small,
                         title: item.alt_description,
-                        src: item.urls.full
+                        src: item.urls.full,
+                        url: item.links.html
                     }))
 
                 }
@@ -34,7 +36,8 @@ const ResultGrid = () => {
                         type: 'video',
                         thumbnail: item.image,
                         title: item.user.name || 'Video',
-                        src: item.video_files[0].link
+                        src: item.video_files[0].link,
+                        url: item.url
                     }))
                 }
                 if (activeTab == 'GIF') {
@@ -44,7 +47,8 @@ const ResultGrid = () => {
                         type: 'GIF',
                         thumbnail: item.images.original.url,
                         title: item.title,
-                        src: item.url
+                        src: item.images.fixed_height.url,
+                        url: item.url
                     }))
                 }
                 dispatch(setResults(data))
@@ -60,11 +64,11 @@ const ResultGrid = () => {
     if(loading) return <h1>Loading...</h1>
 
     return (
-        <div>
+        <div className='flex flex-wrap justify-between gap-5 p-15'>
             {results.map((item, idx) => {
                 return (
-                    <div>
-                        <img className='h-30 w-30' src={item.src} alt="" />
+                    <div key={idx}>
+                        <ResultCard item={item} />
                     </div>    
                 )
             })}

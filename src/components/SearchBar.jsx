@@ -29,7 +29,7 @@ const SearchBar = () => {
             }}
             />
 
-            <button type='submit' className='px-4 py-2 rounded border outline-none'>
+              <button type='submit' className='px-4 py-2 rounded border outline-none cursor-pointer active:scale-95'>
                 Search
             </button>
         </form>

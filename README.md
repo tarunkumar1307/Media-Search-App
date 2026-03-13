@@ -83,7 +83,7 @@ Clone the repository and install dependencies:
 
 ```
 git clone <repo-url>
-cd react-redux-media-search
+cd Media-Search-App
 npm install
 npm run dev
 ```
@@ -92,7 +92,7 @@ npm run dev
 
 ## Status
 
-🚧 Project in development
+Project in development
 Currently implemented:
 
 * Redux store configuration
