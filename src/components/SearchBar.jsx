@@ -16,10 +16,10 @@ const SearchBar = () => {
   return (
     <div className=''>
         <form onSubmit={submitHandler}
-            className='flex gap-5 p-3 w-full'
+              className='flex gap-5 px-12 w-full'
             >
             <input
-            className='px-4 py-2 rounded border outline-none w-full' 
+            className='px-4 py-2 rounded border-2 outline-none w-full' 
             type="text"
             placeholder='Search'
 
@@ -29,7 +29,7 @@ const SearchBar = () => {
             }}
             />
 
-              <button type='submit' className='px-4 py-2 rounded border outline-none cursor-pointer active:scale-95'>
+              <button type='submit' className='px-4 py-2 rounded border-2 outline-none cursor-pointer active:scale-95'>
                 Search
             </button>
         </form>

@@ -15,7 +15,7 @@ const CollectionPage = () => {
     <div className=''>
       <div className='flex justify-between  px-12'>
         <h1 className='text-2xl'>Collection Page</h1>
-        <button className='bg-red-700 px-4 py-2 rounded text-base font-bold active:scale-95 hover:bg-red-800'
+        <button className='bg-red-600 text-white px-4 py-2 rounded text-base font-bold active:scale-95 hover:bg-red-800'
           onClick={() => {
             emptyCollection()
           }}

@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify'
 
 const App = () => {
   return (
-    <div className='bg-gray-950 min-h-screen w-full text-white'>
+    <div className='min-h-screen w-full'>
       <Navbar />
       <Routes>
         <Route path='/' element={<HomePage />} />
