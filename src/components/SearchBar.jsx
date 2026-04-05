@@ -1,40 +1,39 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { setQuery } from '../redux/features/searchSlice'
+import { Search } from 'lucide-react';
 
 const SearchBar = () => {
     const [text, setText] = useState('')
 
     const dispatch = useDispatch()
 
-    function submitHandler(e){
+    function submitHandler(e) {
         e.preventDefault()
         dispatch(setQuery(text))
-        setText('')
     }
 
-  return (
-    <div className=''>
-        <form onSubmit={submitHandler}
-              className='flex gap-5 px-12 w-full'
-            >
-            <input
-            className='px-4 py-2 rounded border-2 outline-none w-full' 
-            type="text"
-            placeholder='Search'
+    return (
+        <div className='w-full'>
+            <form onSubmit={submitHandler} className='flex w-full'>
+                <div className={`flex items-center px-6 py-3 w-full bg-(--color-light) text-(--color-text) rounded-full gap-3 transition-all duration-300 shadow-[0_8px_8px_var(--shadow-color)] `}>
 
-            value={text}
-            onChange={(e)=>{
-                setText(e.target.value)
-            }}
-            />
+                    <input
+                        className='w-full outline-none bg-transparent placeholder-gray-400'
+                        type="text"
+                        placeholder='Search'
+                        value={text}
+                        onChange={(e) => setText(e.target.value)}
+                    />
 
-              <button type='submit' className='px-4 py-2 rounded border-2 outline-none cursor-pointer active:scale-95'>
-                Search
-            </button>
-        </form>
-    </div>
-  )
+                    <button type='submit' className='cursor-pointer active:scale-95'>
+                        <Search />
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    )
 }
 
 export default SearchBar

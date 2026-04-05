@@ -18,7 +18,7 @@ const ResultCard = ({ item }) => {
                 </div>
             </a>
             <div className='flex justify-between items-center gap-2 absolute bottom-0 capitalize w-full bg-linear-to-t from-black to-transparent p-2'>
-                <h1 className='text-lg font-semibold '>{item.title}</h1>
+                <h1 className='text-lg text-white font-semibold '>{item.title}</h1>
                 <button className='bg-blue-700 px-3 py-1 rounded hover:bg-blue-800 active:scale-95 font-semibold'
                     onClick={() => {
                         saveInCollection(item)

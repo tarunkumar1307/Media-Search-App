@@ -1,1 +1,46 @@
 @import "tailwindcss";
+/* 🌞 Light Theme (default) */
+:root {
+  --color-primary: #0D21A1;
+  --color-accent: #EEC643;
+  --color-dark: #141414;
+  --color-light: #EEF0F2;
+  --color-deep: #011638;
+
+  --color-bg: #EEF0F2;
+  --color-text: #141414;
+  --color-card: #ffffff;
+
+  /* Navbar */
+  --navbar-bg: var(--color-primary);
+  --navbar-text: #ffffff;
+
+  --shadow-color: rgba(13, 33, 161, 0.3);
+}
+
+/* 🌙 Dark Theme */
+.dark {
+  --color-bg: #141414;
+  --color-text: #EEF0F2;
+  --color-card: #1f1f1f;
+
+  /* swap primary for contrast */
+  --color-primary: #EEC643;
+
+  /* Navbar */
+  --navbar-bg: var(--color-accent);
+  --navbar-text: #141414;
+
+  --shadow-color: rgba(238, 198, 67, 0.3);
+}
+
+/* Apply globally */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* ✨ Smooth transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

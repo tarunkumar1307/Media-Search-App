@@ -1,9 +1,7 @@
 # React Redux Media Search
 
-A media search application built with **React, Redux Toolkit, and external media APIs**.
-Users can search for a keyword and browse **Photos, Videos, or GIFs** from different APIs in a unified interface.
-
-The application fetches media from multiple sources, normalizes the data, and displays results based on the selected media type tab.
+A modern media search application built with **React, Redux Toolkit, and external APIs**.
+It allows users to search and explore **Photos, Videos, and GIFs** from multiple platforms in a unified interface.
 
 ---
 
