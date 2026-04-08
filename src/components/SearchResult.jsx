@@ -6,9 +6,11 @@ import Tabs from "./Tabs"
 const SearchResult = () => {
   return (
     <div className="flex flex-col gap-6 p-6">
-        <SearchBar />
-        <Tabs />
-        <ResultGrid />
+      <div className="flex gap-10 w-full">
+        <SearchBar className='w-[60%]' />
+        <Tabs className='' />
+      </div>
+      <ResultGrid />
     </div>
   )
 }

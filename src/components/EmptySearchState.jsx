@@ -4,7 +4,7 @@ const SearchEmptyState = () => {
     return (
         <div className='flex flex-col gap-7 items-center justify-center h-[90vh] w-full bg-(--color-bg) text-(--color-text)'>
 
-            <div className='bg-(--color-primary) px-11 py-3 rounded-full text-white'>
+            <div className='bg-(--color-primary) px-11 py-3 rounded-full text-(--navbar-text)'>
                 Image • Video • GIFs
             </div>
 
