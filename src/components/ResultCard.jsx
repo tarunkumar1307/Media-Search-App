@@ -16,7 +16,7 @@ const ResultCard = ({ item }) => {
     }
 
     return (
-        <div className='w-60 bg-(--color-bg) rounded overflow-hidden'>
+        <div className='w-full bg-(--color-bg) rounded overflow-hidden'>
 
             <div className="relative rounded overflow-hidden">
                 <div className="absolute bg-black/10 top-2 left-2 text-white text-xs px-2 py-1 rounded z-10">
@@ -39,7 +39,7 @@ const ResultCard = ({ item }) => {
                 </h1>
 
                 <button
-                    className='p-2 rounded-full active:scale-95 transition text-(--color-primary) hover:bg-white/10'
+                    className='p-2 rounded-full active:scale-95 transition text-(--color-primary) hover:bg-white/10 cursor-pointer'
                     onClick={() => saveInCollection(item)}
                 >
                     {collection.some((itm) => itm.id === item.id)

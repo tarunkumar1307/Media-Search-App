@@ -114,14 +114,12 @@ const ResultGrid = () => {
     if(loading) return <h1>Loading...</h1>
 
     return (
-        <div className='columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-3 p-6'>
-            {results.map((item, idx) => {
-                return (
-                    <div key={idx} className="mb-5 break-inside-avoid">
-                        <ResultCard item={item} />
-                    </div>    
-                )
-            })}
+        <div className='columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-x-5 gap-y-5 p-6'>
+            {results.map((item) => (
+                <div key={item.id} className="mb-5 break-inside-avoid">
+                    <ResultCard item={item} />
+                </div>
+    ))}
         </div>
     )
 }
